@@ -1,0 +1,48 @@
+{
+  "name": "FactoryIO",
+  "protocol": "modbus-tcp",
+  "modbusTcpConfig": {
+    "host": "127.0.0.1",
+    "port": 502,
+    "timeout": 1000,
+    "slaveId": 1,
+    "ioGroups": [
+      {
+        "id": "a263a4ac-f6ad-4d9b-a1c1-fae0bff2ebad",
+        "name": "FactoryInputs",
+        "functionCode": "2",
+        "cycleTime": 100,
+        "offset": "0",
+        "length": 1,
+        "errorHandling": "keep-last-value",
+        "ioPoints": [
+          {
+            "id": "FactoryInputs_0",
+            "name": "FactoryInputs_0",
+            "type": "Digital Input (Discrete Input)",
+            "iecLocation": "%IX0.0",
+            "alias": ""
+          }
+        ]
+      },
+      {
+        "id": "be452e4e-825b-45f6-a6f9-0b4559c8c43e",
+        "name": "FactoryOutputs",
+        "functionCode": "5",
+        "cycleTime": 100,
+        "offset": "0",
+        "length": 1,
+        "errorHandling": "keep-last-value",
+        "ioPoints": [
+          {
+            "id": "FactoryOutputs_0",
+            "name": "FactoryOutputs_0",
+            "type": "Digital Output (Single Coil)",
+            "iecLocation": "%QX0.0",
+            "alias": ""
+          }
+        ]
+      }
+    ]
+  }
+}

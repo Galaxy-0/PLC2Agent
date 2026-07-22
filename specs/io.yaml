@@ -1,0 +1,121 @@
+schema_version: plc2agent/v1alpha1
+signals:
+  - id: start_pb
+    direction: input
+    data_type: bool
+    description: 启动按钮
+    plc: { address: "%IX0.0" }
+    plant: { source: panel.start }
+    modbus: { area: discrete_input, offset: 0 }
+
+  - id: stop_pb
+    direction: input
+    data_type: bool
+    description: 正常停止按钮
+    plc: { address: "%IX0.1" }
+    plant: { source: panel.stop }
+    modbus: { area: discrete_input, offset: 1 }
+
+  - id: reset_pb
+    direction: input
+    data_type: bool
+    description: 故障复位按钮
+    plc: { address: "%IX0.2" }
+    plant: { source: panel.reset }
+    modbus: { area: discrete_input, offset: 2 }
+
+  - id: estop_ok
+    direction: input
+    data_type: bool
+    description: 急停安全回路正常
+    plc: { address: "%IX0.3" }
+    plant: { source: panel.estop_ok }
+    modbus: { area: discrete_input, offset: 3 }
+
+  - id: entry_sensor
+    direction: input
+    data_type: bool
+    description: 入口箱体检测
+    plc: { address: "%IX0.4" }
+    plant: { source: entry_sensor.detected }
+    modbus: { area: discrete_input, offset: 4 }
+
+  - id: type_b_sensor
+    direction: input
+    data_type: bool
+    description: B类识别
+    plc: { address: "%IX0.5" }
+    plant: { source: type_sensor.is_b }
+    modbus: { area: discrete_input, offset: 5 }
+
+  - id: push_sensor
+    direction: input
+    data_type: bool
+    description: 箱体到达推料位
+    plc: { address: "%IX0.6" }
+    plant: { source: push_sensor.detected }
+    modbus: { area: discrete_input, offset: 6 }
+
+  - id: pusher_extended
+    direction: input
+    data_type: bool
+    description: 气缸伸出到位
+    plc: { address: "%IX0.7" }
+    plant: { source: pusher.extended }
+    modbus: { area: discrete_input, offset: 7 }
+
+  - id: pusher_retracted
+    direction: input
+    data_type: bool
+    description: 气缸缩回到位
+    plc: { address: "%IX1.0" }
+    plant: { source: pusher.retracted }
+    modbus: { area: discrete_input, offset: 8 }
+
+  - id: main_conveyor
+    direction: output
+    data_type: bool
+    safety_class: motion
+    safe_value: false
+    description: 主输送带运行
+    plc: { address: "%QX0.0" }
+    plant: { target: main_conveyor.command }
+    modbus: { area: coil, offset: 0 }
+
+  - id: side_conveyor
+    direction: output
+    data_type: bool
+    safety_class: motion
+    safe_value: false
+    description: 侧输送带运行
+    plc: { address: "%QX0.1" }
+    plant: { target: side_conveyor.command }
+    modbus: { area: coil, offset: 1 }
+
+  - id: pusher_extend
+    direction: output
+    data_type: bool
+    safety_class: motion
+    safe_value: false
+    description: 推料气缸伸出
+    plc: { address: "%QX0.2" }
+    plant: { target: pusher.extend_command }
+    modbus: { area: coil, offset: 2 }
+
+  - id: run_lamp
+    direction: output
+    data_type: bool
+    safe_value: false
+    description: 运行指示
+    plc: { address: "%QX0.3" }
+    plant: { target: panel.run_lamp }
+    modbus: { area: coil, offset: 3 }
+
+  - id: fault_lamp
+    direction: output
+    data_type: bool
+    safe_value: false
+    description: 故障指示
+    plc: { address: "%QX0.4" }
+    plant: { target: panel.fault_lamp }
+    modbus: { area: coil, offset: 4 }

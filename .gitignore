@@ -1,0 +1,40 @@
+.DS_Store
+*.swp
+*.swo
+.strucpp_history
+.idea/
+.vscode/
+
+# Generated outputs
+artifacts/generated/
+artifacts/reports/
+artifacts/traces/
+artifacts/local/
+artifacts/private/
+docs/research/
+*.iplc
+*.log
+
+# Runtime and build caches
+**/build/
+**/.cache/
+**/__pycache__/
+**/node_modules/
+
+# Local secrets and overrides
+.env
+.env.*
+!.env.example
+*.local.yaml
+*.local.json
+*.local.toml
+**/secrets/
+**/CertificateStores/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Historical application logs are retained locally but not versioned by default.
+artifacts/legacy/factoryio-backup/logs/
+artifacts/legacy/factoryio-backup/config/

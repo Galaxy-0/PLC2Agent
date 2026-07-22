@@ -1,0 +1,12 @@
+schema_version: plc2agent/v1alpha1
+id: normal-b-box
+requirements: [REQ-001, REQ-003, REQ-004, SAF-002]
+given:
+  - reset: plant
+  - set: { estop_ok: true }
+when:
+  - pulse: { signal: start_pb, duration: 100ms }
+  - spawn: { material: box_b, at: source }
+then:
+  - eventually: { expression: "count_b == 1", within: 15s }
+  - always: { expression: "!(pusher_extend && main_conveyor)" }

@@ -1,0 +1,59 @@
+schema_version: plc2agent/v1alpha1
+project:
+  id: conveyor-sorter
+  cycle_time: 20ms
+
+modes: [stopped, automatic, manual, faulted]
+
+sequences:
+  - id: sorter
+    initial: idle
+    states:
+      idle:
+        outputs: { main_conveyor: false, side_conveyor: false, pusher_extend: false }
+        transitions:
+          - when: estop_ok && start_pb
+            to: waiting
+      waiting:
+        outputs: { main_conveyor: true, side_conveyor: false, pusher_extend: false }
+        transitions:
+          - when: push_sensor && type_b_sensor
+            to: stop_for_push
+      stop_for_push:
+        outputs: { main_conveyor: false, side_conveyor: true, pusher_extend: false }
+        transitions:
+          - after: 200ms
+            to: pushing
+      pushing:
+        outputs: { main_conveyor: false, side_conveyor: true, pusher_extend: true }
+        transitions:
+          - when: pusher_extended
+            to: retracting
+      retracting:
+        outputs: { main_conveyor: false, side_conveyor: true, pusher_extend: false }
+        transitions:
+          - when: pusher_retracted
+            to: waiting
+
+invariants:
+  - id: pusher_conveyor_interlock
+    requirement: SAF-002
+    expression: "!(pusher_extend && main_conveyor)"
+    severity: critical
+  - id: estop_motion_safe
+    requirement: SAF-001
+    expression: "estop_ok || !(main_conveyor || side_conveyor || pusher_extend)"
+    severity: critical
+
+timing_contracts:
+  - id: estop_response
+    requirement: SAF-001
+    trigger: "estop_ok == false"
+    expectation: "!(main_conveyor || side_conveyor || pusher_extend)"
+    within: 40ms
+
+alarms:
+  - { id: transport_timeout, code: 101, latched: true }
+  - { id: pusher_extend_timeout, code: 201, latched: true }
+  - { id: pusher_retract_timeout, code: 202, latched: true }
+  - { id: exit_blocked, code: 301, latched: true }

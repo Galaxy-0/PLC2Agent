@@ -1,0 +1,17 @@
+schema_version: plc2agent/v1alpha1
+id: emergency-stop
+requirements: [SAF-001, SAF-003]
+given:
+  - reset: plant
+  - set: { estop_ok: true }
+  - pulse: { signal: start_pb, duration: 100ms }
+when:
+  - set: { estop_ok: false }
+then:
+  - within:
+      duration: 40ms
+      expression: "!(main_conveyor || side_conveyor || pusher_extend)"
+  - after:
+      actions:
+        - set: { estop_ok: true }
+      assert: "mode != automatic"

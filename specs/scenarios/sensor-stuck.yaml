@@ -1,0 +1,16 @@
+schema_version: plc2agent/v1alpha1
+id: entry-sensor-stuck-on
+requirements: [FLT-001, FLT-004]
+given:
+  - reset: plant
+  - set: { estop_ok: true }
+when:
+  - inject_fault:
+      target: entry_sensor
+      behavior: stuck_at
+      value: true
+then:
+  - eventually: { expression: "alarm_code == 101", within: 10s }
+  - assert: { expression: "fault_latched == true" }
+  - pulse: { signal: reset_pb, duration: 100ms }
+  - assert: { expression: "fault_latched == true" }

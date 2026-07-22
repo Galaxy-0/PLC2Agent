@@ -1,0 +1,54 @@
+schema_version: plc2agent/v1alpha1
+tick: 10ms
+seed: 1
+
+components:
+  - id: panel
+    type: operator_panel
+    ports: [start, stop, reset, estop_ok, run_lamp, fault_lamp]
+
+  - id: source
+    type: material_source
+    output: entry
+
+  - id: main_conveyor
+    type: conveyor
+    length: 3m
+    speed: 0.5m/s
+    input: entry
+    output: exit_a
+
+  - id: side_conveyor
+    type: conveyor
+    length: 1.5m
+    speed: 0.4m/s
+    input: pushed_entry
+    output: exit_b
+
+  - id: entry_sensor
+    type: photoelectric_sensor
+    conveyor: main_conveyor
+    position: 0.2m
+
+  - id: type_sensor
+    type: material_classifier
+    conveyor: main_conveyor
+    position: 1.0m
+    classes: [A, B]
+
+  - id: push_sensor
+    type: photoelectric_sensor
+    conveyor: main_conveyor
+    position: 2.2m
+
+  - id: pusher
+    type: pneumatic_pusher
+    conveyor: main_conveyor
+    position: 2.25m
+    destination: side_conveyor
+    extend_time: 400ms
+    retract_time: 350ms
+
+materials:
+  - { id: box_a, class: A, length: 0.3m }
+  - { id: box_b, class: B, length: 0.3m }
