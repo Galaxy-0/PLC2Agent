@@ -1,0 +1,17 @@
+/home/galaxy/Project/PLC2Agent/labs/04-senior-benchmark/.cache/strucpp-0.6.0.tgz: OK
+STruC++ version 0.6.0
+Compiling cell.st...
+Output written to /home/galaxy/Project/PLC2Agent/labs/04-senior-benchmark/build/cell.cpp
+Header written to /home/galaxy/Project/PLC2Agent/labs/04-senior-benchmark/build/cell.hpp
+Compilation successful!
+In file included from /home/galaxy/Project/PLC2Agent/labs/04-senior-benchmark/build/cell.hpp:14,
+                 from /home/galaxy/Project/PLC2Agent/labs/04-senior-benchmark/driver.cpp:2:
+/home/galaxy/Project/PLC2Agent/labs/04-senior-benchmark/.cache/strucpp-node-0.6.0/package/src/runtime/include/iec_pointer.hpp:264:5: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  264 |     const pointer_type operator->() const {
+      |     ^~~~~
+In file included from /home/galaxy/Project/PLC2Agent/labs/04-senior-benchmark/build/cell.hpp:14,
+                 from /home/galaxy/Project/PLC2Agent/labs/04-senior-benchmark/build/cell.cpp:4:
+/home/galaxy/Project/PLC2Agent/labs/04-senior-benchmark/.cache/strucpp-node-0.6.0/package/src/runtime/include/iec_pointer.hpp:264:5: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  264 |     const pointer_type operator->() const {
+      |     ^~~~~
+Native ST scan driver: /home/galaxy/Project/PLC2Agent/labs/04-senior-benchmark/build/cell-cli

@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-10-08T16:43:14.236314+00:00",
+  "baseline_commit": "ca62cf1e2880ed1a6369b24a59c48173cdd0f6db",
+  "verification_kind": "reference_environment; no independent AI model evaluation; no field safety validation",
+  "environment": {
+    "hostname": "bauhinia",
+    "platform": "Linux-6.8.0-137-generic-x86_64-with-glibc2.39",
+    "os_release": "PRETTY_NAME=\"Ubuntu 24.04.3 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.3 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "architecture": "x86_64",
+    "cpu_count": 20,
+    "python": "3.12.3",
+    "node": "v22.23.2",
+    "npm": "10.9.8",
+    "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "compiler": "STruC++ version 0.6.0"
+  },
+  "toolchain": {
+    "official_asset_url": "https://api.github.com/repos/Autonomy-Logic/STruCpp/releases/assets/479332927",
+    "tag": "v0.6.0",
+    "release_published_at": "2026-07-16T15:35:52Z",
+    "asset_sha256": "e59b876031b8e9f5d1431ec93d5cd630b2455b79bf1b2f3da224808028294ab0",
+    "compiler_cli_sha256": "bae951e4fbd94d37bb1e567b6f3c84d7644e955583c94862b6eb6ebcf1a2844e",
+    "npm_packages": {
+      "node_modules/@chevrotain/cst-dts-gen": {
+        "version": "11.0.3",
+        "integrity": "sha512-BvIKpRLeS/8UbfxXxgC33xOumsacaeCKAjAeLyOn7Pcp95HiRbrpl14S+9vaZLolnbssPIUuiUd8IvgkRyt6NQ=="
+      },
+      "node_modules/@chevrotain/gast": {
+        "version": "11.0.3",
+        "integrity": "sha512-+qNfcoNk70PyS/uxmj3li5NiECO+2YKZZQMbmjTqRI3Qchu8Hig/Q9vgkHpI3alNjr7M+a2St5pw5w5F6NL5/Q=="
+      },
+      "node_modules/@chevrotain/regexp-to-ast": {
+        "version": "11.0.3",
+        "integrity": "sha512-1fMHaBZxLFvWI067AVbGJav1eRY7N8DDvYCTwGBiE/ytKBgP8azTdgyrKyWZ9Mfh09eHWb5PgTSO8wi7U824RA=="
+      },
+      "node_modules/@chevrotain/types": {
+        "version": "11.0.3",
+        "integrity": "sha512-gsiM3G8b58kZC2HaWR50gu6Y1440cHiJ+i3JUvcp/35JchYejb2+5MVeJK0iKThYpAa/P2PYFV4hoi44HD+aHQ=="
+      },
+      "node_modules/@chevrotain/utils": {
+        "version": "11.0.3",
+        "integrity": "sha512-YslZMgtJUyuMbZ+aKvfF3x1f5liK4mWNxghFRv7jqRR9C3R3fAOGTTKvxXDa2Y1s9zSbcpuO0cAxDYsc9SrXoQ=="
+      },
+      "node_modules/chevrotain": {
+        "version": "11.0.3",
+        "integrity": "sha512-ci2iJH6LeIkvP9eJW6gpueU8cnZhv85ELY8w8WiFtNjMHA5ad6pQLaJo9mEly/9qUyCpvqX8/POVUTf18/HFdw=="
+      },
+      "node_modules/lodash-es": {
+        "version": "4.17.21",
+        "integrity": "sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw=="
+      }
+    },
+    "npm_lifecycle_scripts_enabled": false
+  },
+  "build_outputs_sha256": {
+    "cell.cpp": "9331a94015d925fb80a9384e964fbffd5670f31e183b38e80d10162b1827cb5c",
+    "cell.hpp": "70bc65d015a9e1a45724f5e1efcb90184ccb40b1daa8adf3dc170ca09e0fa655",
+    "cell-cli": "3df6f1cbdcbdfec2c23ad6b89fe99d93be4425f2586e2105c2a41a84cf9c54a3"
+  },
+  "diagnostic_raw_sha256": "2f6ff96d5f2d8008a8b8b8d0a83d024560d9a5811f720cae9741d7591d061ee1",
+  "diagnostic_review_normalization": "trailing blank lines removed; complete raw diagnostic retained in build/",
+  "input_sha256": {
+    "cell.st": "200ebabc18ad071686c64680e6793f973d775c7658ef3a2302bdcc18cca26f51",
+    "driver.cpp": "4c62d59650eed7439fab35fe29e20ad916836ed2c8391b719498c07c8add7f94",
+    "bench.py": "a89a48a39906c05f56f11d9d9d387434e745195271b9eb3b327440d8cee6dc1b",
+    "setup-linux.sh": "45818c9fc4627133f6f30cdbd97dc31b6a210e07fac1c6d2332c7c28af5281eb",
+    "build.sh": "0aea907348c32911a05568028c5fef870ff52190ea7c78cc2a1969321f8f20ea",
+    "verify.sh": "ea6ebac68075eaf51900a746e9fd8109cfaf121d65dc4025658e6b48ce36a772",
+    "mutations.py": "947c6838f926d8cdf919a91d852dd4b8cf862249885402294fc535f2ab5b79db",
+    "test-cli.py": "02131531c7522ff9c66ad07de992d5b3545060e194887d7adfe3f5015ede59c1",
+    "collect-evidence.py": "298a4ca88ad4b0b2432234ebd029deba56b154a63cebcbae79e667be8989bdc7",
+    "toolchain/package.json": "3dc7a237251a4e573de1e0021d6ce55684bd5f15faee072d85662d0910256a25",
+    "toolchain/package-lock.json": "04a15cc44098dc6c97903747d746fdc6c6511ba71dfddfc134ae2f6d749bdefe"
+  },
+  "results": {
+    "reference": [
+      15,
+      15
+    ],
+    "deterministic_replay": [
+      15,
+      15
+    ],
+    "negative_controls_detected": [
+      5,
+      5
+    ],
+    "compile_error_rejected": true,
+    "ndjson_interface": {
+      "passed": true,
+      "frames": 14,
+      "invalid_frames_rejected": 5,
+      "normal_transfer_completed": true
+    }
+  },
+  "artifact_sha256": {
+    "build.log": "cf0644fa71c64802a8d18903cd37ecd3b53bde41c2c17d4d92d020e6a8eb1733",
+    "cli-summary.json": "ae1536b02f6dc3c6e571e825fa2fea8af46d104ad55e8bdc0f066667ceb2df03",
+    "cli-transcript.ndjson": "dbf747f954bbbef88a21dffccfe02cc7f58f8251abd4e9052775d9f4ddf8b2b4",
+    "compile-error.log": "4e7ff102ef02166fa901bdc8f2ee3ee65616242ce9cc454d9b9d5ebc5cb6b498",
+    "mutations.json": "a66084d5f154b68008fb372fd9adcbcc6d6758e80b2282f88c0d1b36adc2d521",
+    "negative-reports.json": "e120cbaf9688c89ec6efc6b900a4fa6f1cf5890ca492753af09a69036b925710",
+    "reference-report.json": "17d11a66f771af31814743f7ed9afb6605bb506f16ea9e9abfcb7e428952c3df",
+    "trace-excerpts.ndjson": "0ed05c35f8e29e96d9ddea8aee888c86f06b599ff18fb73b7b98724a26b61502"
+  }
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "mutation": "ignore_communication_stale",
+    "compiled_successfully": true,
+    "build_log_sha256": "6c0d12c5a04c1c22990cd3bc95cab4311eea9584f0b89c33e531b7081c93cfdc",
+    "passed": 14,
+    "total": 15,
+    "failures": [
+      {
+        "case": "communication_stale",
+        "error": "AssertionError: ",
+        "scans": 4,
+        "trace_sha256": "7bdfb96565ed7cd04e469510420289da3c113c62b2cb787b05020e9a1ac449ad",
+        "final": {
+          "ExtendCmd": 1,
+          "RetractCmd": 0,
+          "FeedPermit": 0,
+          "Busy": 1,
+          "FaultLatched": 0,
+          "FaultCode": 0,
+          "State": 20,
+          "AcceptedSeq": 11,
+          "DoneSeq": 0,
+          "CompletedCount": 0,
+          "ActiveRecipeVersion": 0,
+          "ActiveTimeoutTicks": 30,
+          "ActiveDelayTicks": 2,
+          "CycleTimeoutTicks": 30,
+          "CycleDelayTicks": 2,
+          "RecipeRejected": 0
+        },
+        "receiver_ledger": []
+      }
+    ]
+  },
+  {
+    "mutation": "accept_duplicate_sequence",
+    "compiled_successfully": true,
+    "build_log_sha256": "0bfad7fbcae1802e781cd022fe82a9637f52347f38700efab84631b7fcc9ec08",
+    "passed": 13,
+    "total": 15,
+    "failures": [
+      {
+        "case": "duplicate_request",
+        "error": "AssertionError: ",
+        "scans": 119,
+        "trace_sha256": "3365ed81888a16168829ccfa57c5652425f94a03c4bd391d03cb61eabd31ae66",
+        "final": {
+          "ExtendCmd": 0,
+          "RetractCmd": 1,
+          "FeedPermit": 0,
+          "Busy": 1,
+          "FaultLatched": 0,
+          "FaultCode": 0,
+          "State": 40,
+          "AcceptedSeq": 11,
+          "DoneSeq": 11,
+          "CompletedCount": 6,
+          "ActiveRecipeVersion": 0,
+          "ActiveTimeoutTicks": 30,
+          "ActiveDelayTicks": 2,
+          "CycleTimeoutTicks": 30,
+          "CycleDelayTicks": 2,
+          "RecipeRejected": 0
+        },
+        "receiver_ledger": [
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11
+        ]
+      },
+      {
+        "case": "reset_edge_and_reconcile",
+        "error": "AssertionError: faulted transaction replayed after reconciliation",
+        "scans": 23,
+        "trace_sha256": "ef18541f581c9ab9f55e32ae5422cbd4a84a868abbb8d482b355e75a4ea2efc8",
+        "final": {
+          "ExtendCmd": 0,
+          "RetractCmd": 1,
+          "FeedPermit": 0,
+          "Busy": 1,
+          "FaultLatched": 0,
+          "FaultCode": 0,
+          "State": 40,
+          "AcceptedSeq": 11,
+          "DoneSeq": 0,
+          "CompletedCount": 0,
+          "ActiveRecipeVersion": 0,
+          "ActiveTimeoutTicks": 30,
+          "ActiveDelayTicks": 2,
+          "CycleTimeoutTicks": 30,
+          "CycleDelayTicks": 2,
+          "RecipeRejected": 0
+        },
+        "receiver_ledger": [
+          11
+        ]
+      }
+    ]
+  },
+  {
+    "mutation": "accept_wrong_ack",
+    "compiled_successfully": true,
+    "build_log_sha256": "3bd3cd2a22eee824db597a6a57153ec6a0ee0932039df2d1e05dd90fa74c01a3",
+    "passed": 14,
+    "total": 15,
+    "failures": [
+      {
+        "case": "mismatched_ack",
+        "error": "AssertionError: expected condition not reached within bounded scans",
+        "scans": 53,
+        "trace_sha256": "0acd4d307612fa30b6d1d96142ccae23ec6998db5358854bee3fb473a09da208",
+        "final": {
+          "ExtendCmd": 0,
+          "RetractCmd": 0,
+          "FeedPermit": 1,
+          "Busy": 0,
+          "FaultLatched": 0,
+          "FaultCode": 0,
+          "State": 10,
+          "AcceptedSeq": 11,
+          "DoneSeq": 11,
+          "CompletedCount": 1,
+          "ActiveRecipeVersion": 0,
+          "ActiveTimeoutTicks": 30,
+          "ActiveDelayTicks": 2,
+          "CycleTimeoutTicks": 30,
+          "CycleDelayTicks": 2,
+          "RecipeRejected": 0
+        },
+        "receiver_ledger": [
+          11
+        ]
+      }
+    ]
+  },
+  {
+    "mutation": "accept_held_reset",
+    "compiled_successfully": true,
+    "build_log_sha256": "180713c6e92242020472173da2d46efb78b44428805d32f309133aca6a74ee05",
+    "passed": 14,
+    "total": 15,
+    "failures": [
+      {
+        "case": "reset_edge_and_reconcile",
+        "error": "AssertionError: held reset acknowledged restored trip",
+        "scans": 7,
+        "trace_sha256": "f602687c40c060365acec6de31edfd73d4e46792a0691d2b27dd677bb9d1318e",
+        "final": {
+          "ExtendCmd": 0,
+          "RetractCmd": 0,
+          "FeedPermit": 0,
+          "Busy": 0,
+          "FaultLatched": 0,
+          "FaultCode": 0,
+          "State": 0,
+          "AcceptedSeq": 11,
+          "DoneSeq": 0,
+          "CompletedCount": 0,
+          "ActiveRecipeVersion": 0,
+          "ActiveTimeoutTicks": 30,
+          "ActiveDelayTicks": 2,
+          "CycleTimeoutTicks": 30,
+          "CycleDelayTicks": 2,
+          "RecipeRejected": 0
+        },
+        "receiver_ledger": []
+      }
+    ]
+  },
+  {
+    "mutation": "disable_motion_timeout",
+    "compiled_successfully": true,
+    "build_log_sha256": "5626d34b0fd0156e5c1cd24d3e6653c0eba3ef7a1186180ea206a25912cdc997",
+    "passed": 11,
+    "total": 15,
+    "failures": [
+      {
+        "case": "extend_timeout",
+        "error": "AssertionError: expected condition not reached within bounded scans",
+        "scans": 35,
+        "trace_sha256": "6bb7111fa9e1bcaeaca18670b217608c0c2cdbdfba06813d25ada2f6188db03d",
+        "final": {
+          "ExtendCmd": 1,
+          "RetractCmd": 0,
+          "FeedPermit": 0,
+          "Busy": 1,
+          "FaultLatched": 0,
+          "FaultCode": 0,
+          "State": 20,
+          "AcceptedSeq": 11,
+          "DoneSeq": 0,
+          "CompletedCount": 0,
+          "ActiveRecipeVersion": 0,
+          "ActiveTimeoutTicks": 30,
+          "ActiveDelayTicks": 2,
+          "CycleTimeoutTicks": 30,
+          "CycleDelayTicks": 2,
+          "RecipeRejected": 0
+        },
+        "receiver_ledger": []
+      },
+      {
+        "case": "mismatched_ack",
+        "error": "AssertionError: expected condition not reached within bounded scans",
+        "scans": 53,
+        "trace_sha256": "cea52f05e4700bf3d740b14d70eaef1f2fdf60f365d3dd3027d67b37090ab5a0",
+        "final": {
+          "ExtendCmd": 1,
+          "RetractCmd": 0,
+          "FeedPermit": 0,
+          "Busy": 1,
+          "FaultLatched": 0,
+          "FaultCode": 0,
+          "State": 30,
+          "AcceptedSeq": 11,
+          "DoneSeq": 0,
+          "CompletedCount": 0,
+          "ActiveRecipeVersion": 0,
+          "ActiveTimeoutTicks": 30,
+          "ActiveDelayTicks": 2,
+          "CycleTimeoutTicks": 30,
+          "CycleDelayTicks": 2,
+          "RecipeRejected": 0
+        },
+        "receiver_ledger": [
+          11
+        ]
+      },
+      {
+        "case": "lost_ack",
+        "error": "AssertionError: expected condition not reached within bounded scans",
+        "scans": 53,
+        "trace_sha256": "f77291b2de72c9a93640ff7d606760bcf7aef6ac75bebe7bf61752960965b35c",
+        "final": {
+          "ExtendCmd": 1,
+          "RetractCmd": 0,
+          "FeedPermit": 0,
+          "Busy": 1,
+          "FaultLatched": 0,
+          "FaultCode": 0,
+          "State": 30,
+          "AcceptedSeq": 11,
+          "DoneSeq": 0,
+          "CompletedCount": 0,
+          "ActiveRecipeVersion": 0,
+          "ActiveTimeoutTicks": 30,
+          "ActiveDelayTicks": 2,
+          "CycleTimeoutTicks": 30,
+          "CycleDelayTicks": 2,
+          "RecipeRejected": 0
+        },
+        "receiver_ledger": [
+          11
+        ]
+      },
+      {
+        "case": "retract_timeout",
+        "error": "AssertionError: expected condition not reached within bounded scans",
+        "scans": 63,
+        "trace_sha256": "e8af5561416707590848c3eeab4d2b72cb4f391275459db917ad6b61eb82b1da",
+        "final": {
+          "ExtendCmd": 0,
+          "RetractCmd": 1,
+          "FeedPermit": 0,
+          "Busy": 1,
+          "FaultLatched": 0,
+          "FaultCode": 0,
+          "State": 40,
+          "AcceptedSeq": 11,
+          "DoneSeq": 0,
+          "CompletedCount": 0,
+          "ActiveRecipeVersion": 0,
+          "ActiveTimeoutTicks": 30,
+          "ActiveDelayTicks": 2,
+          "CycleTimeoutTicks": 30,
+          "CycleDelayTicks": 2,
+          "RecipeRejected": 0
+        },
+        "receiver_ledger": [
+          11
+        ]
+      }
+    ]
+  }
+]

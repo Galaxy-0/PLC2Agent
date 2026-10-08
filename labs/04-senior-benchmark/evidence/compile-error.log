@@ -1,0 +1,7 @@
+Compiling compile-error.st...
+
+Compilation failed:
+
+compile-error.st:107:24: error: Undeclared variable 'MISSINGSEQUENCE'
+ 107 |         AcceptedSeq := MissingSequence;
+     |                        ^
