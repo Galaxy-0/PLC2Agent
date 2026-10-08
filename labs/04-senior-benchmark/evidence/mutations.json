@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "kind": "verifier_negative_controls",
+  "detected": 5,
+  "total": 5,
+  "mutations": [
+    {
+      "mutation": "ignore_communication_stale",
+      "expected_failure": "communication_stale",
+      "detected": true,
+      "exit_code": 1,
+      "failed_cases": [
+        "communication_stale"
+      ],
+      "source_sha256": "43757055635cb1fdb68792eb09b426226906341291d5a1229967ec1ac850a8ad"
+    },
+    {
+      "mutation": "accept_duplicate_sequence",
+      "expected_failure": "duplicate_request",
+      "detected": true,
+      "exit_code": 1,
+      "failed_cases": [
+        "duplicate_request",
+        "reset_edge_and_reconcile"
+      ],
+      "source_sha256": "2c70eaeb3d08aac0b2f982b6d6fc0b4ab7a0d18355e4920e4df34f3a012d94da"
+    },
+    {
+      "mutation": "accept_wrong_ack",
+      "expected_failure": "mismatched_ack",
+      "detected": true,
+      "exit_code": 1,
+      "failed_cases": [
+        "mismatched_ack"
+      ],
+      "source_sha256": "d4cc0eb8c23680d086ada5901f1ffd1e9111d90f5d4c1cda92f4961cf3c1bf20"
+    },
+    {
+      "mutation": "accept_held_reset",
+      "expected_failure": "reset_edge_and_reconcile",
+      "detected": true,
+      "exit_code": 1,
+      "failed_cases": [
+        "reset_edge_and_reconcile"
+      ],
+      "source_sha256": "eea2282ab8751f37b2cf636c948d23fcb717e2a16805e53d9d7464e4cae7fe6f"
+    },
+    {
+      "mutation": "disable_motion_timeout",
+      "expected_failure": "extend_timeout",
+      "detected": true,
+      "exit_code": 1,
+      "failed_cases": [
+        "extend_timeout",
+        "mismatched_ack",
+        "lost_ack",
+        "retract_timeout"
+      ],
+      "source_sha256": "812c5c1c8fd2331ce91053df0bfda72c7f49439c12424674957d980b0da87552"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "method": "lower_bound_monthly_salary; index-only evidence; no annual-salary conversion",
+  "jobs": [
+    {
+      "id": "J01",
+      "title": "高级PLC工程师（非标自动化产线、整套设备）",
+      "employer_as_visible": "猎头；雇主匿名",
+      "city": "深圳",
+      "experience": "3-5年",
+      "education": "大专",
+      "monthly_salary_cny_range": [
+        25000,
+        30000
+      ],
+      "salary_months": null,
+      "salary_basis": "平台标示月薪；税前/税后及奖金构成未披露；额外薪数单列，不用于提高月薪门槛",
+      "strictly_above_20k_lower_bound": true,
+      "observed_at_utc": "2026-10-08",
+      "source_date_as_visible": "2026-09-30",
+      "job_posted_at": null,
+      "source_url": "https://m.liepin.com/a/79559255.shtml",
+      "evidence_level": "search_index_only",
+      "full_jd_verified": false,
+      "current_open_status_verified": false,
+      "visible_requirement_tags": [
+        "非标自动化产线",
+        "整套设备"
+      ],
+      "access_limitation": "全文打开被验证码或抓取错误阻断；未绕过；不将工程推断冒称完整JD"
+    },
+    {
+      "id": "J02",
+      "title": "PLC电气工程师（非标自动化行业）",
+      "employer_as_visible": "猎头；雇主匿名",
+      "city": "南京",
+      "experience": "3-5年",
+      "education": "本科",
+      "monthly_salary_cny_range": [
+        20000,
+        21000
+      ],
+      "salary_months": null,
+      "salary_basis": "平台标示月薪；税前/税后及奖金构成未披露；额外薪数单列，不用于提高月薪门槛",
+      "strictly_above_20k_lower_bound": false,
+      "observed_at_utc": "2026-10-08",
+      "source_date_as_visible": "2026-09-30",
+      "job_posted_at": null,
+      "source_url": "https://m.liepin.com/a/80267873.shtml",
+      "evidence_level": "search_index_only",
+      "full_jd_verified": false,
+      "current_open_status_verified": false,
+      "visible_requirement_tags": [
+        "非标自动化",
+        "电气自动化/自动控制相关专业"
+      ],
+      "access_limitation": "全文打开被验证码或抓取错误阻断；未绕过；不将工程推断冒称完整JD"
+    },
+    {
+      "id": "J03",
+      "title": "3C非标自动化设备电气/电控开发工程师",
+      "employer_as_visible": "富联裕展科技(深圳)有限公司",
+      "city": "深圳龙华",
+      "experience": "8年以上",
+      "education": "本科",
+      "monthly_salary_cny_range": [
+        25000,
+        40000
+      ],
+      "salary_months": 13,
+      "salary_basis": "平台标示月薪；税前/税后及奖金构成未披露；额外薪数单列，不用于提高月薪门槛",
+      "strictly_above_20k_lower_bound": true,
+      "observed_at_utc": "2026-10-08",
+      "source_date_as_visible": "2026-09（索引月份；日未知）",
+      "job_posted_at": null,
+      "source_url": "https://m.liepin.com/zpzdhdqsbgcsy3q7/",
+      "evidence_level": "search_index_only",
+      "full_jd_verified": false,
+      "current_open_status_verified": false,
+      "visible_requirement_tags": [
+        "3C",
+        "非标设备",
+        "电控开发"
+      ],
+      "access_limitation": "全文打开被验证码或抓取错误阻断；未绕过；不将工程推断冒称完整JD"
+    },
+    {
+      "id": "J04",
+      "title": "资深电气工程师（整机/高精度运动平台/运动控制器）",
+      "employer_as_visible": "深圳市大族数控科技股份有限公司",
+      "city": "深圳福永",
+      "experience": "5年以上",
+      "education": "本科",
+      "monthly_salary_cny_range": [
+        30000,
+        50000
+      ],
+      "salary_months": null,
+      "salary_basis": "平台标示月薪；税前/税后及奖金构成未披露；额外薪数单列，不用于提高月薪门槛",
+      "strictly_above_20k_lower_bound": true,
+      "observed_at_utc": "2026-10-08",
+      "source_date_as_visible": "2026-07-11（列表更新时间）",
+      "job_posted_at": null,
+      "source_url": "https://m.liepin.com/zpzsjzdqgcsfu8b5xs/",
+      "evidence_level": "search_index_only",
+      "full_jd_verified": false,
+      "current_open_status_verified": false,
+      "visible_requirement_tags": [
+        "整机",
+        "高精度运动平台",
+        "运动控制器"
+      ],
+      "access_limitation": "全文打开被验证码或抓取错误阻断；未绕过；不将工程推断冒称完整JD"
+    },
+    {
+      "id": "J05",
+      "title": "PLC程序开发及调试",
+      "employer_as_visible": "猎头；某北京整车制造上市公司",
+      "city": "北京",
+      "experience": "5年以上",
+      "education": "本科",
+      "monthly_salary_cny_range": [
+        25000,
+        40000
+      ],
+      "salary_months": null,
+      "salary_basis": "平台标示月薪；税前/税后及奖金构成未披露；额外薪数单列，不用于提高月薪门槛",
+      "strictly_above_20k_lower_bound": true,
+      "observed_at_utc": "2026-10-08",
+      "source_date_as_visible": "2026-09（索引月份；日未知）",
+      "job_posted_at": null,
+      "source_url": "https://www.liepin.com/s/aaf56fa2f7a3392052382b698c567394/",
+      "evidence_level": "search_index_only",
+      "full_jd_verified": false,
+      "current_open_status_verified": false,
+      "visible_requirement_tags": [
+        "PLC程序开发",
+        "调试"
+      ],
+      "access_limitation": "全文打开被验证码或抓取错误阻断；未绕过；不将工程推断冒称完整JD"
+    },
+    {
+      "id": "J06",
+      "title": "高级电气工程师/主管（非标自动化设备，三菱/汇川PLC）",
+      "employer_as_visible": "猎头；某东莞计算机硬件公司",
+      "city": "东莞",
+      "experience": "5-10年",
+      "education": "本科",
+      "monthly_salary_cny_range": [
+        20000,
+        25000
+      ],
+      "salary_months": 13,
+      "salary_basis": "平台标示月薪；税前/税后及奖金构成未披露；额外薪数单列，不用于提高月薪门槛",
+      "strictly_above_20k_lower_bound": false,
+      "observed_at_utc": "2026-10-08",
+      "source_date_as_visible": "2026-09（索引月份；日未知）",
+      "job_posted_at": null,
+      "source_url": "https://m.liepin.com/zpzdhdqsbgcsy3q7/",
+      "evidence_level": "search_index_only",
+      "full_jd_verified": false,
+      "current_open_status_verified": false,
+      "visible_requirement_tags": [
+        "非标自动化设备",
+        "三菱PLC",
+        "汇川PLC"
+      ],
+      "access_limitation": "全文打开被验证码或抓取错误阻断；未绕过；不将工程推断冒称完整JD"
+    }
+  ]
+}
